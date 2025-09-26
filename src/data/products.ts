@@ -1,14 +1,110 @@
-// src/data/products.ts
-export const sampleProducts = [
+import { Product } from '@/types/product'
+
+export const sampleProducts: Product[] = [
     {
         id: '1',
-        name: 'Classic T-Shirt',
-        price: 29.99,
-        image: '/products/tshirt.jpg',
+        name: 'Classic White T-Shirt',
+        description: 'Yumshoq 100% paxta material. Har kunlik kiyish uchun ideal.',
+        price: 25000,
+        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop',
         category: 'clothing',
-        description: 'Comfortable cotton t-shirt',
+        subcategory: 't-shirts',
+        brand: 'YourBrand',
         sizes: ['S', 'M', 'L', 'XL'],
-        colors: ['black', 'white', 'gray']
+        colors: ['white', 'black', 'gray'],
+        stock: 50,
+        rating: 4.5,
+        reviewCount: 123,
+        featured: true,
+        tags: ['cotton', 'casual', 'basic']
     },
-    // Ko'proq mahsulotlar...
+    {
+        id: '2',
+        name: 'Slim Fit Jeans',
+        description: 'Premium denim material bilan slim fit. Zamonaviy va qulay.',
+        price: 89000,
+        image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=500&fit=crop',
+        category: 'clothing',
+        subcategory: 'jeans',
+        brand: 'YourBrand',
+        sizes: ['28', '30', '32', '34', '36'],
+        colors: ['blue', 'black'],
+        stock: 30,
+        rating: 4.3,
+        reviewCount: 87,
+        featured: false,
+        tags: ['denim', 'slim-fit', 'casual']
+    },
+    {
+        id: '3',
+        name: 'Wireless Headphones',
+        description: 'Sifatli simsiz quloqchin, shovqin bekor qilish funksiyasi bilan.',
+        price: 299000,
+        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
+        category: 'electronics',
+        subcategory: 'audio',
+        brand: 'TechBrand',
+        colors: ['black', 'white', 'blue'],
+        stock: 25,
+        rating: 4.8,
+        reviewCount: 245,
+        featured: true,
+        tags: ['wireless', 'audio', 'tech']
+    },
+    {
+        id: '4',
+        name: 'Running Shoes',
+        description: 'Sport poyabzal yugurish va mashq qilish uchun.',
+        price: 129000,
+        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop',
+        category: 'shoes',
+        subcategory: 'sports',
+        brand: 'SportBrand',
+        sizes: ['39', '40', '41', '42', '43', '44'],
+        colors: ['black', 'white', 'red'],
+        stock: 40,
+        rating: 4.6,
+        reviewCount: 156,
+        featured: true,
+        tags: ['sports', 'running', 'comfortable']
+    },
+    {
+        id: '5',
+        name: 'Leather Wallet',
+        description: 'Sifatli teri hamyon, ko\'p bo\'limli va zamonaviy dizayn.',
+        price: 45000,
+        image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&h=500&fit=crop',
+        category: 'accessories',
+        subcategory: 'wallets',
+        brand: 'LeatherCo',
+        colors: ['brown', 'black'],
+        stock: 60,
+        rating: 4.4,
+        reviewCount: 89,
+        featured: false,
+        tags: ['leather', 'wallet', 'accessories']
+    },
+    {
+        id: '6',
+        name: 'Smart Watch',
+        description: 'Aqlli soat fitness tracker va ko\'plab funksiyalar bilan.',
+        price: 199000,
+        image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop',
+        category: 'electronics',
+        subcategory: 'wearable',
+        brand: 'TechBrand',
+        colors: ['black', 'silver', 'gold'],
+        stock: 35,
+        rating: 4.7,
+        reviewCount: 203,
+        featured: true,
+        tags: ['smartwatch', 'fitness', 'tech']
+    }
+]
+
+export const categories = [
+    { id: 'clothing', name: 'Kiyim', slug: 'clothing' },
+    { id: 'electronics', name: 'Elektronika', slug: 'electronics' },
+    { id: 'shoes', name: 'Poyabzal', slug: 'shoes' },
+    { id: 'accessories', name: 'Aksessuarlar', slug: 'accessories' }
 ]
